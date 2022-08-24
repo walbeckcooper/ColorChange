@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ColorView: View
 {
-    @State private var backgroundColor : Color = .clwhite
+    @State private var backgroundColor : Color = .white
     
     var body: some View
     {
