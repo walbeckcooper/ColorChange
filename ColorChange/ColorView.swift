@@ -19,11 +19,17 @@ struct ColorView: View
                 .edgesIgnoringSafeArea(.all)
             VStack
             {
+                Button("Click!", action: changeBackgroundColor)
                 Text("Demo of a stack")
                 Text("Hello, world!")
                     .padding()
             }
         }
+    }
+    
+    func changeBackgroundColor() -> Void
+    {
+        self.backgroundColor = makeRandomColor()
     }
     
     func makeRandomColor() -> Color
@@ -34,7 +40,6 @@ struct ColorView: View
         
         return Color (red: redPercent, green: greenPercent, blue: bluePercent)
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider
