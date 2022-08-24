@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ColorView: View
 {
+    @State private var backgroundColor : Color = .clwhite
+    
     var body: some View
     {
-        VStack
+        ZStack
         {
-            Text("Demo of a stack")
-            Text("Hello, world!")
-                .padding()
+            backgroundColor
+                .edgesIgnoringSafeArea(.all)
+            VStack
+            {
+                Text("Demo of a stack")
+                Text("Hello, world!")
+                    .padding()
+            }
         }
     }
     
