@@ -11,9 +11,23 @@ struct ColorView: View
 {
     var body: some View
     {
-        Text("Hello, world!")
-            .padding()
+        VStack
+        {
+            Text("Demo of a stack")
+            Text("Hello, world!")
+                .padding()
+        }
     }
+    
+    func makeRandomColor() -> Color
+    {
+        let redPercent : Double = (Double ( arc4random() % UInt32 (256) ) / 255.0)
+        let greenPercent : Double = (Double ( arc4random() % UInt32 (256) ) / 255.0)
+        let bluePercent : Double = (Double ( arc4random() % UInt32 (256) ) / 255.0)
+        
+        return Color (red: redPercent, green: greenPercent, blue: bluePercent)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider
