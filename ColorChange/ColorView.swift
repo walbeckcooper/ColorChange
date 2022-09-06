@@ -22,6 +22,7 @@ struct ColorView: View
                 Text("Demo of a stack")
                 Text("Hello, world!")
                     .padding()
+                    
             }
         }
     }
